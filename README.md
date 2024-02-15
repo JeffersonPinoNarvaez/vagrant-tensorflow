@@ -3,9 +3,9 @@
 
 In this repo we will check out how to create our own easy to run vagrant box with a preset of:
 
-- Tensorflow 0.9.0
-- Python3 3.4.3
-- pip 1.5.4
+- Tensorflow 2.15.0
+- Python 3.10.12
+- pip 22.0.2
 - Ubuntu 22.04 (bento/ubuntu-22.04)
 
 NOTE: this box is based on a current existing ubuntu general box named: "bento/ubuntu-22.04".
