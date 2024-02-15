@@ -8,7 +8,7 @@ In this repo we will check out how to create our own easy to run vagrant box wit
 - pip 22.0.2
 - Ubuntu 22.04 (bento/ubuntu-22.04)
 
-NOTE: this box is based on a current existing ubuntu general box named: "bento/ubuntu-22.04".
+NOTE: The official box could be found at: https://app.vagrantup.com/JeffersonPino/boxes/ubuntu-tensorflow
 
 
 
