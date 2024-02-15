@@ -1,14 +1,14 @@
 
 # Running tensorflow in a vagrant box installation
 
-In this repo we will check out how to create our own easy to run vagrant box with a preset of:
+In this repo we will check out how to create our easy-to-run vagrant box with a preset of:
 
 - Tensorflow 2.15.0
 - Python 3.10.12
 - pip 22.0.2
-- Ubuntu 22.04 (bento/ubuntu-22.04)
+- Ubuntu 22.04
 
-NOTE: The official box could be found at: https://app.vagrantup.com/JeffersonPino/boxes/ubuntu-tensorflow
+NOTE: The official box can be found at: https://app.vagrantup.com/JeffersonPino/boxes/ubuntu-tensorflow
 
 
 
@@ -20,39 +20,39 @@ After checking out the main branch three files will be downloaded:
 - tensorflow-mnist-example.py
 - Vagrantfile
 
-The Vagranfile cointains all the code needed to install our new ubuntu node.
+The Vagranfile contains all the code needed to install our new Ubuntu node.
 
-Once we are located inside our project folder, run:
+Once we are located inside our project folder, run the following:
 
-This will start up our vagran enviroment:
+This will start up our vagrant environment:
 ```bash
   vagrant init 
 ```
 
-We can now start downloading and initilizing our machine:
+We can now start downloading and initializing our machine:
 ```bash
   vagrant up 
 ```
 
 ## Connecting to our box.
 
-we can check if our box was succesfully installed with the following command:
+we can check if our box was successfully installed with the following command:
 
 This command is going to list all available vagrant boxes running:
 ```bash
   vagrant status 
 ```
 
-In order to connect to our box, we need to run the following command:
+To connect to our box, we need to run the following command:
 
-If everything went as planned we must see our ubuntu command line:
+If everything went as planned we must see our Ubuntu command line:
 ```bash
   vagrant ssh tensorFlowClient 
 ```
 
 ## Executing our tensorflow test.
 
-Our Vagrantfile already includes a line for setting up a shared folder between our machine and host. This will allow us to transfer easly files between machine.
+Our Vagrantfile already includes a line for setting up a shared folder between our machine and host. This will allow us to transfer easily files between machines.
 
 ```bash
   tensorFlowClient.vm.synced_folder "./sharedFolder", "/home/vagrant/sharedFolder" 
@@ -73,8 +73,8 @@ Both files could be executed by running:
 ```
 This will print out the current version of our tensorflow installation.
 
-Our second test will use more complex libraries such as Keras, which will allow us to run a keras default model included in our tensorflow installation called mnist. (https://www.tensorflow.org/datasets/catalog/mnist?hl=es-419) 
+Our second test will use more complex libraries such as Keras, allowing us to run a Keras default model included in our tensorflow installation called mnist. (https://www.tensorflow.org/datasets/catalog/mnist?hl=es-419) 
 ```bash
   python3 tensorflow-mnist-example.py
 ```
-If everything runs as planned, we will see our prediction result printing in the terminal.
+We will see our predicted result printing in the terminal if everything runs as planned.
