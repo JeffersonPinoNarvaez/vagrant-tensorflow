@@ -8,9 +8,10 @@ Vagrant.configure("2") do |config|
     config.vbguest.no_remote   = true    
   end
 
-  config.vm.define :tensorFlowClientFromZero do |tensorFlowClientFromZero|
-    tensorFlowClientFromZero.vm.box = "bento/ubuntu-22.04"
-    tensorFlowClientFromZero.vm.synced_folder "./sharedFolder", "/home/vagrant/sharedFolder"
-    tensorFlowClientFromZero.vm.hostname = "tensorFlowClientFromZero"    
+  config.vm.define :tensorFlowClient do |tensorFlowClient|
+    tensorFlowClient.vm.box = "JeffersonPino/ubuntu-tensorflow"
+    tensorFlowClient.vm.box_version = "0.1.0"
+    tensorFlowClient.vm.synced_folder "./sharedFolder", "/home/vagrant/sharedFolder"
+    tensorFlowClient.vm.hostname = "tensorFlowClient"    
   end
 end

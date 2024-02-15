@@ -1,8 +1,11 @@
+#This code is an example of a simple Convolutional Neural Network (CNN) 
+#implemented using TensorFlow's Keras API 
+#to classify handwritten digits from the MNIST dataset.
+
 import tensorflow.keras.layers as LK
 import tensorflow.keras.models as MK
+import tensorflow.keras as keras
 import numpy as np
-
-from tensorflow import keras
 
 inputData = LK.Input(shape=(28,28,1))
 conv1 = LK.Conv2D(8,(5,5), padding = 'valid', activation = 'sigmoid')(inputData)
